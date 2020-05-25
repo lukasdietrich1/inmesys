@@ -1,87 +1,32 @@
 {
-    "interactionModel": {
-        "languageModel": {
-            "invocationName": "adventure castle",
-            "intents": [
-                {
-                    "name": "AMAZON.CancelIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.HelpIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.StopIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.NavigateHomeIntent",
-                    "samples": []
-                },
-                {
-                    "name": "Walk",
-                    "slots": [
-                        {
-                            "name": "where",
-                            "type": "AMAZON.Actor",
-                            "samples": [
-                                "east",
-                                "west",
-                                "south",
-                                "north"
-                            ]
-                        }
-                    ],
-                    "samples": [
-                        "go",
-                        "walk"
-                    ]
-                }
-            ],
-            "types": []
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:146055411942:function:6ad4aeb3-a009-422c-8e27-cc327fb77ca7:Release_0"
         },
-        "dialog": {
-            "intents": [
-                {
-                    "name": "Walk",
-                    "confirmationRequired": false,
-                    "prompts": {},
-                    "slots": [
-                        {
-                            "name": "where",
-                            "type": "AMAZON.Actor",
-                            "confirmationRequired": true,
-                            "elicitationRequired": true,
-                            "prompts": {
-                                "confirmation": "Confirm.Slot.181788904698.384442728940",
-                                "elicitation": "Elicit.Slot.181788904698.384442728940"
-                            }
-                        }
-                    ]
-                }
-            ],
-            "delegationStrategy": "ALWAYS"
-        },
-        "prompts": [
-            {
-                "id": "Elicit.Slot.181788904698.384442728940",
-                "variations": [
-                    {
-                        "type": "PlainText",
-                        "value": "where do you want to go?"
-                    }
-                ]
-            },
-            {
-                "id": "Confirm.Slot.181788904698.384442728940",
-                "variations": [
-                    {
-                        "type": "PlainText",
-                        "value": "ok we're going"
-                    }
-                ]
-            }
-        ]
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "publishingInformation": {
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionCountries": [],
+      "isAvailableWorldwide": true,
+      "locales": {
+        "en-US": {
+          "description": "Sample Full Description",
+          "examplePhrases": [
+            "Alexa open hello world",
+            "hello",
+            "help"
+          ],
+          "keywords": [],
+          "name": "Adventure castle",
+          "summary": "Sample Short Description"
+        }
+      },
+      "testingInstructions": "Sample Testing Instructions."
     }
+  }
 }

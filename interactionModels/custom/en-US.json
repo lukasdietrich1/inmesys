@@ -1,0 +1,101 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "adventure castle",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "Walk",
+          "slots": [
+            {
+              "name": "where",
+              "type": "AMAZON.Actor",
+              "samples": [
+                "east",
+                "west",
+                "south",
+                "north"
+              ]
+            }
+          ],
+          "samples": [
+            "go",
+            "walk"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "Walk",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "where",
+              "type": "AMAZON.Actor",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.181788904698.384442728940",
+                "elicitation": "Elicit.Slot.181788904698.384442728940"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.181788904698.384442728940",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "where do you want to go?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.181788904698.384442728940",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "ok we\u0027re going"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "7"
+}
