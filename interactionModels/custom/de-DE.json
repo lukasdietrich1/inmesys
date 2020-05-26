@@ -1,0 +1,106 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "fliehe aus dem verlies",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "laufen",
+          "slots": [
+            {
+              "name": "wohin",
+              "type": "AMAZON.Actor",
+              "samples": [
+                "nach osten",
+                "nach westen",
+                "nach süden",
+                "nach norden",
+                "nach rechts",
+                "nach links",
+                "nach unten",
+                "nach oben"
+              ]
+            }
+          ],
+          "samples": [
+            "gehe nach",
+            "gehe",
+            "go",
+            "laufe",
+            "ich möchte woanders hin"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "laufen",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.689979555140"
+          },
+          "slots": [
+            {
+              "name": "wohin",
+              "type": "AMAZON.Actor",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1211582543689.344566440839"
+              }
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Confirm.Slot.1211582543689.344566440839",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "okay"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1211582543689.344566440839",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "wohin möchtest du gehen?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.689979555140",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "ok, wohin möchtest du gehen?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "5"
+}

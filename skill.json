@@ -3,7 +3,7 @@
     "apis": {
       "custom": {
         "endpoint": {
-          "uri": "arn:aws:lambda:us-east-1:146055411942:function:6ad4aeb3-a009-422c-8e27-cc327fb77ca7:Release_0"
+          "uri": "arn:aws:lambda:us-east-1:146055411942:function:678cea59-9c8b-4517-8a20-13c6931cecce:Release_0"
         },
         "interfaces": []
       }
@@ -14,7 +14,7 @@
       "distributionCountries": [],
       "isAvailableWorldwide": true,
       "locales": {
-        "en-US": {
+        "de-DE": {
           "description": "Sample Full Description",
           "examplePhrases": [
             "Alexa open hello world",
@@ -22,7 +22,7 @@
             "help"
           ],
           "keywords": [],
-          "name": "Adventure castle",
+          "name": "Flucht aus dem Verlies",
           "summary": "Sample Short Description"
         }
       },

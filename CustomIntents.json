@@ -1,0 +1,47 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "fliehe aus dem verlies",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "laufen",
+                    "slots": [
+                        {
+                            "name": "wohin",
+                            "type": ""
+                        },
+                        {
+                            "name": "ort",
+                            "type": ""
+                        }
+                    ],
+                    "samples": [
+                        "bewege dich zu {ort}",
+                        "gehe nach {ort}",
+                        "gehe",
+                        "go",
+                        "laufe",
+                        "ich möchte woanders hin"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}

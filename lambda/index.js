@@ -8,7 +8,7 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speakOutput = 'this is the adventure castle, what do you want to do';
+        const speakOutput = 'Du sitzt in einem Verlies in einer Burg fest, was möchtest du machen?';
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)
